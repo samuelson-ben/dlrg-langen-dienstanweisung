@@ -1,0 +1,70 @@
+\begin{tikzpicture}
+	[mybox/.style={
+		rectangle,rounded corners=1mm,minimum size=6mm,anchor=base,
+		very thick,draw=black!50,top color=white,bottom color=black!20},
+	ybox/.style={
+		rectangle,rounded corners=1mm,minimum size=6mm,anchor=base,
+		very thick,draw=black!50,top color=white,bottom color=yellow!20},
+	bbox/.style={
+		rectangle,rounded corners=1mm,minimum size=6mm,anchor=base,
+		very thick,draw=black!50,top color=white,bottom color=blue!20},
+	rbox/.style={
+		rectangle,rounded corners=1mm,minimum size=6mm,anchor=base,
+		very thick,draw=black!50,top color=white,bottom color=red!20},
+	gbox/.style={
+		rectangle,rounded corners=1mm,minimum size=6mm,anchor=base,
+		very thick,draw=black!50,top color=white,bottom color=green!20},
+	wbox/.style={
+		rectangle,rounded corners=1mm,minimum size=6mm,anchor=base,
+		very thick,draw=black!50,top color=white,bottom color=white!20},
+	nobox/.style={
+		rectangle,rounded corners=1mm,minimum size=6mm,anchor=base,
+		very thick,draw=white!50,top color=white,bottom color=white!20},
+	circle/.style={
+		draw,ellipse}]
+
+	\node (wr1) [rbox] {Wasserretter 1};
+	\node (wr2) [rbox, right=2cm of wr1] {Wasserretter 2};
+	\node (wr3) [wbox, right=2cm of wr2] {Wasserretter 3};
+	\node (wf) 	[bbox, right=2cm of wr3] {Wachführer};
+	
+	\node (aus) [ybox, below=of wr1] {\parbox{2.5cm}{Ausrüstung (Rettungsbrett) aufnehmen}};
+	\node (mel) [bbox, below=of wr2] {\parbox{2.5cm}{Meldung an den Wachführer\\ }};
+	\node (san) [gbox, below=of wr3] {\parbox{2.5cm}{San-Ausrüstung ans Ufer\\ }};
+	
+	\node (h20) [ybox, below=5mm of aus] {\parbox{2.5cm}{ins Wasser \& anschwimmen\\ }};
+	\node (ruk) [bbox, below=5mm of mel] {\parbox{2.5cm}{Rückmeldung WF abwarten\\ }};
+	\node (unt) [gbox, below=5mm of san] {\parbox{2.5cm}{zur Unterstützung zum Anlandebereich}};
+	
+	\node (sic) [ybox, below=5mm of h20] {\parbox{2.5cm}{Sichern an der Wasseroberfläche}};
+	\node (abc) [bbox, below=5mm of ruk] {\parbox{2.5cm}{ABC--Ausrüstung aufnehmen}};
+	
+	\node (h21) [bbox, below=5mm of abc] {\parbox{2.5cm}{ins Wasser \& anschwimmen}};
+	
+	\node (rt2) [ybox, below=19.4mm of sic] {\parbox{2.5cm}{Rücktransport d. Verunfallten z. Ufer}};
+	\node (rtr) [bbox, below=5mm of h21] {\parbox{2.5cm}{Rücktransport d. Verunfallten z. Ufer}};
+	
+	\node (ve1) [ybox, below=5mm of rt2] {\parbox{2.5cm}{Versorgung des Patienten an Land}};
+	\node (ve2) [bbox, below=5mm of rtr] {\parbox{2.5cm}{Versorgung des Patienten an Land}};
+	\node (ve3) [gbox, below=57.2mm of unt] {\parbox{2.5cm}{Versorgung des Patienten an Land}};
+	
+	\node (ubg) [gbox, below=5mm of ve3] {\parbox{2.5cm}{Übergabe an den Landrettungsdienst}};
+	
+	% Wachfuehrergedoens	
+	\node (ela) [wbox, below=of wf]  {\parbox{2.5cm}{eigene Lage}};
+	\node (gef) [wbox, below=1mm of ela] {\parbox{2.5cm}{Gefahrenlage}};	
+	\node (tak) [wbox, below=1mm of gef] {\parbox{2.5cm}{taktische Entscheidung}};
+	\node (kra) [wbox, below=1mm of tak] {\parbox{2.5cm}{Kräfte ausreichend?}};
+	\node (not) [wbox, below=1mm of kra] {\parbox{2.5cm}{Notruf}};
+	\node (vog) [wbox, below=95mm of not] {\parbox{2.5cm}{Leitung Einsatz informieren}};
+	\node (pre) [wbox, below=5mm of vog] {\parbox{2.5cm}{Umgang mit der Presse}};
+	
+	% Unfallereignis
+	\node (beo) [circle, below right=2mm and -1mm of wr1] {Unfallereignis};
+	
+	% Erstgespreaech
+	\node (egs) [wbox, below right=5mm and -11.7cm of ubg] {\parbox{15.6cm}{\centering Erstgespräch/Einsatznachbesprechung}};
+	
+	% Einsatzdoku
+	\node (doku) [wbox, left=1mm of tak] {\begin{sideways}\parbox{2.5cm}{Einsatz-dokumentation}\end{sideways}};
+\end{tikzpicture}

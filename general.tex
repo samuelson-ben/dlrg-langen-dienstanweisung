@@ -1,0 +1,88 @@
+\documentclass[ %
+10pt, % Schriftgroesse
+a4paper, % Papiergroesse
+headsepline, % Kopfzeilenlinie
+footsepline, % Fusszeilenlinie
+%parskip, % Abstand zw. Absaetzen
+headings=normal, % etw. kleinere Ueberschriften
+parskip=full,
+%draft % Testkram
+]{scrreprt}
+% packages
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ucs}
+\usepackage[ngerman]{babel}
+\usepackage{url} % Schönere URLs
+\usepackage{graphicx} % Grafiken
+%\usepackage{microtype} % Schoenere Blocksatzraender
+\usepackage[ngerman]{varioref} % Tolle Verweise
+\usepackage[german]{fancyref} % Tolle Verweise V2
+\usepackage{hyperref}
+%\usepackage{fancyhdr} % Kopf- und Fusszeilen
+\usepackage[automark]{scrpage2} % Kopf- und Fusszeilen
+\usepackage[top=2cm, bottom=4cm, lmargin=2cm,rmargin=2cm, footskip=1.5cm]{geometry} % Seitenraender
+\usepackage[locale=DE,alsoload=binary]{siunitx} % Einheiten
+% Entwurf
+\usepackage{color} % Paket für verschiedene Farben
+\usepackage{eso-pic}
+\usepackage{wallpaper}
+\usepackage{tikz}
+\usepackage{rotating}
+\usepackage{blindtext}
+
+\newcommand{\makedate}{15. April 2013}
+
+\usetikzlibrary{matrix,fadings,calc,positioning,
+				decorations.pathreplacing,arrows,shapes}
+
+\definecolor{lightgray}{gray}{.75}
+
+\definecolor{dlrgblue}{cmyk}{.98,.47,0,.3}
+
+\author{}%Einsatz}
+%\title{Dienstanweisung}
+\title{}
+\date{}%Stand: \makedate}
+\publishers{}%Landesverband Niedersachsen\\Bezirk Cuxhaven-Osterholz\\Ortsgruppe Langen e.V.}
+%\publishers{Ortsgruppe Langen e.V.}
+
+
+%{
+%\AddToShipoutPicture{%
+%\AtTextCenter{%
+%\makebox(0,0)[c]{\resizebox{\textwidth}{!}{%
+%\rotatebox{45}{\textsf{\textbf{\color{lightgray}Entwurf}}}}}
+%}
+%}
+%}
+
+\newcommand{\changefont}[3]{
+\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+
+\newcommand{\erganzung}{}
+\newcommand{\dienstanweisung}{Übersicht}
+
+
+
+
+\pagestyle{scrheadings}
+% \ihead{Technik/Einsatz}
+% \ohead{\includegraphics[height=\headheight]{Logo-B-Graustufen}}
+\ihead{DLRG OG Langen e.V.}
+\ohead{Technik/Einsatz}
+\ifoot{\dienstanweisung \erganzung}
+\cfoot{Stand: \makedate}
+\ofoot{\pagemark}
+
+\begin{document}
+\changefont{cmss}{m}{n}
+%\maketitle
+%\tableofcontents
+%\addtocontents{toc}{\protect\thispagestyle{scrheadings}} 
+% \addpart{Allgemeines zur Dienstanweisung}
+% \thispagestyle{empty}
+%\include{Allgemeines}
+%\include{WRD}
+%\include{WRD-Mat}
+%\end{document}
