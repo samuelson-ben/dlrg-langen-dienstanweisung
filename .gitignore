@@ -1,3 +1,4 @@
+# LaTeX Hilfsdateien
 *.aux
 *.fdb_latexmk
 *.fls
@@ -5,7 +6,10 @@
 *.synctex(busy)
 *.out
 
+# DVI und PostScript Dateien
 *.dvi
 *.out.ps
 
+# Alle PDFs ignorieren, außer Deckblatt.pdf
 *.pdf
+!Deckblatt.pdf
