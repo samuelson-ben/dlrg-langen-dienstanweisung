@@ -15,6 +15,7 @@
 3-01_San-Dienst.fls
 3-01_San-Dienst.log
 3-01_San-Dienst.out
+3-01_San-Dienst.pdf
 4-01_WRD.aux
 4-01_WRD.fdb_latexmk
 4-01_WRD.fls
@@ -29,6 +30,7 @@ app-din-13155.aux
 app-din-13155.fdb_latexmk
 app-din-13155.fls
 app-din-13155.log
+app-din-13155.pdf
 general.aux
 general.fdb_latexmk
 general.fls
