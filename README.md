@@ -4,13 +4,19 @@
 
 ### usage
 
-#### Unix
+#### set files for deletion
 
-`bash delete_files.sh`
+1. open `delete_list.txt`
+2. append or remove a filename to list (every line one filename)
+3. caution: let a blank line at the end of the file or the last filename will be ignored
 
-#### Windows
+#### using in command prompt
 
-`delete_files.bat`
+- Unix\
+  `bash delete_files.sh`
+
+- Windows\
+  `delete_files.bat`
 
 ### optional arguments
 
