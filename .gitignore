@@ -14,3 +14,9 @@
 # Alle PDFs ignorieren, außer Deckblatt.pdf
 *.pdf
 !Deckblatt.pdf
+
+!0-00_deckblatt_uebersicht.pdf
+!0-01_Allgemeines.pdf
+!3-01_San-Dienst.pdf
+!4-01_WRD.pdf
+!app-din-13155.pdf
