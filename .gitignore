@@ -4,6 +4,7 @@
 *.fls
 *.log
 *.synctex(busy)
+*.synctex.gz
 *.out
 
 # DVI und PostScript Dateien
