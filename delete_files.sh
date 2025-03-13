@@ -12,9 +12,21 @@ if [ ! -f "$LIST_FILE" ]; then
     exit 1
 fi
 
+# Prüfen, ob das Argument "keeppdf" übergeben wurde
+KEEP_PDF=false
+if [ "$1" == "keeppdf" ]; then
+    KEEP_PDF=true
+fi
+
 # Dateien aus der Liste löschen
 while IFS= read -r file; do
+    # Überprüfen, ob die Datei existiert
     if [ -f "$TARGET_DIR$file" ]; then
+        # Falls keeppdf aktiviert ist, PDF-Dateien überspringen
+        if $KEEP_PDF && [[ "$file" == *.pdf ]]; then
+            echo "Übersprungen (PDF): $file"
+            continue
+        fi
         rm "$TARGET_DIR$file"
         echo "Gelöscht: $file"
     else
